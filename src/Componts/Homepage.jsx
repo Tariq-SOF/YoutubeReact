@@ -43,8 +43,8 @@ function Homepage() {
 
   return (
     <>
-    <div className=" m-0 pt-[82px] ml-[96px] bg-[#f8f8f8]">
-      <header className="header flex flex-row h-[56px] justify-between fixed top-0 right-0 left-0 bg-white border-b-2 border-[#e6e6e6] z-50" > 
+    <div className=" m-0 pt-[82px] p-8 ml-[96px] bg-[#f8f8f8] max-sm:w-[230%] max-sm:text-sm ">
+      <header className="header flex flex-row h-[56px] justify-between fixed top-0 right-0 left-0 bg-white border-b-2 border-[#e6e6e6] z-50 " > 
             <div className="flex items-center w-[150px] relative" >
             <img className="w-[25px] ml-6 cursor-pointer"  src={menu}/>
             <img className="h-[20px] ml-6 cursor-pointer"  src={Youtube}/>
@@ -57,7 +57,7 @@ function Homepage() {
             
         </div>                                                        
         <div className="w-[206px] flex items-center justify-evenly shrink-0 " >
-            <div className="relative flex justify-center items-center upload-continr" ><img className="h-[24px] cursor-pointer"  src={video_creat}/><div className="flex justify-items-center items-center absolute bottom-[-30px] bg-[#808080] text-[#ffffff] py-4 px-8 text-xs rounded-sm transition-opacity duration-150 opacity-0 pointer-events-none whitespace-nowrap hover:opacity-1 " >Create</div></div>
+            <div className="relative flex justify-center items-center upload-continr " ><img className="h-[24px] cursor-pointer "  src={video_creat}/><div className="flex justify-items-center items-center absolute bottom-[-30px] bg-[#808080] text-[#ffffff] py-4 px-8 text-xs rounded-sm transition-opacity duration-150 opacity-0 pointer-events-none whitespace-nowrap hover:opacity-1 " >Create</div></div>
             {/* <div className="relative flex justify-center items-center apps-continr" ><img className="h-6 cursor-pointer"  src="http://127.0.0.1:5500/intr%20to%20html/icons/youtube-apps.svg"/><div className="flex justify-items-center items-center absolute bottom-[-30px] bg-[#808080] text-[#ffffff] py-4 px-8 text-xs rounded-sm transition-opacity duration-150 opacity-0 pointer-events-none whitespace-nowrap hover:opacity-1 " >YouTube apps</div></div> */}
             <div className="relative">
             <div className="relative flex justify-center items-center " ><img className="h-6 cursor-pointer "src={notification}/><div className="flex justify-items-center items-center absolute bottom-[-30px] bg-[#808080] text-[#ffffff] py-4 px-8 text-xs rounded-sm transition-opacity duration-150 opacity-0 pointer-events-none whitespace-nowrap hover:opacity-1 " >Notifications</div></div>
@@ -74,20 +74,20 @@ function Homepage() {
        <div className="h-[73px] flex justify-center items-center flex-col cursor-pointer hover:bg-[#f0f0f0] font-roboto font-arial" ><img className="w-6 flex justify-center items-center mb-1" src={music}/><div>YouTube Music</div></div> 
 ?     </nav>    
 
-  <div className="grid grid-cols-3 gap-x-5 gap-y-10" >
+  <div className="grid grid-cols-3 gap-x-5 gap-y-10 ">
 {/* onClick={()=>{vidClick(item.id)}} */}
 
              {allapi.map((item)=>(
-                   <div key={item.id}>  
+                   <div key={item.id} className="max-sm:text-xs">  
             <div class="D1" > 
             <div className="relative cursor-pointer" >  
             <div  >            
-            <img  className="w-full " src={item.snippet.thumbnails.medium.url}/> 
+            <img  className="w-full rounded-2xl" src={item.snippet.thumbnails.medium.url}/> 
             </div> 
             </div>
             <div className=" flex flex-cols gap-4 m-1">
-            <div className="p-0 cursor-pointer rounded-[25px]  " >
-        <img className=" w-[36px] rounded-[25px] border[-1px] border-solid border-[#121212] border[1px] mt-[8px]" src={item.snippet.thumbnails.default.url}/> 
+            <div className="p-0  cursor-pointer " >
+        <img className="small peicher h-[32px] rounded-2xl border-solid border-[#121212] border[1px] mt-[8px]" src={item.snippet.thumbnails.default.url}/> 
             </div>
             <div className=" ml-[-10] flex flex-col ">
             <p className=" w-[280px] font-semibold leading-[25px] text- mt-[8px] mb-[0%] cursor-pointer ">{item.snippet.title}</p>
