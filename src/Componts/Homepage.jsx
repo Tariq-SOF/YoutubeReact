@@ -78,19 +78,19 @@ function Homepage() {
 {/* onClick={()=>{vidClick(item.id)}} */}
 
              {allapi.map((item)=>(
-                   <div key={item.id} className="max-sm:text-xs">  
-            <div class="D1" > 
-            <div className="relative cursor-pointer" >  
+                   <div key={item.id} className="max-sm:text-xs ">  
+            <div class="D1 h-[40vh] flex flex-col m-1 " > 
+            <div className="relative cursor-pointer " >  
             <div  >            
             <img  className="w-full rounded-2xl" src={item.snippet.thumbnails.medium.url}/> 
             </div> 
             </div>
-            <div className=" flex flex-cols gap-4 m-1">
+            <div className=" max-sm:w-full flex flex-cols gap-2 h-full  ">
             <div className="p-0  cursor-pointer " >
-        <img className="small peicher h-[32px] rounded-2xl border-solid border-[#121212] border[1px] mt-[8px]" src={item.snippet.thumbnails.default.url}/> 
+        <img className="small peicher inline-block w-10 h- rounded-full object-cover border-solid border-[#121212] border[1px] mt-[8px] max-sm:w-full" src={item.snippet.thumbnails.default.url}/> 
             </div>
-            <div className=" ml-[-10] flex flex-col ">
-            <p className=" w-[280px] font-semibold leading-[25px] text- mt-[8px] mb-[0%] cursor-pointer ">{item.snippet.title}</p>
+            <div className=" ml-[-10] flex flex-col gap-1 ">
+            <p className=" w-[280px] font-semibold leading-[25px] text- mt-[8px] mb-[0%] cursor-pointer max-sm:w-[200px] ">{item.snippet.title}</p>
             <p className="text-sm text-[#606060] cursor-pointer mb-2" >{item.snippet.channelTitle}</p>
             <p className="leading-none text-sm text-[#606060] cursor-pointer" >{item.statistics.viewCount}</p> 
             </div>
